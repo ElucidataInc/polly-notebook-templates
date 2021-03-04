@@ -8,7 +8,7 @@ RUN apt-get update -y --no-install-recommends && \
     apt-get install -y --no-install-recommends <<add-system-dependencies>>
 
 COPY requirement.txt /requirement.txt 
-RUN pip3 install --ignore-installed --no-cache-dir -r /requirement.txt
+RUN pip3 install --use-feature=2020-resolver --ignore-installed --no-cache-dir -r /requirement.txt
 
 ##### User changes end  here ##############################s
 #Do not change the below line
